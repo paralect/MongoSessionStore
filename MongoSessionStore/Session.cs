@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Web.SessionState;
 using System.Text;
 using MongoDB.Bson;
-using MongoDB.Bson.DefaultSerializer;
+using MongoDB.Bson.Serialization.Attributes;
 
 
 namespace MongoSessionStore

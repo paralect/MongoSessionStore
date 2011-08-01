@@ -53,10 +53,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MongoDB.Bson">
-      <HintPath>..\libs\MongoDB.Bson.dll</HintPath>
+      <HintPath>..\libs\MongoDriver\MongoDB.Bson.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Driver">
-      <HintPath>..\libs\MongoDB.Driver.dll</HintPath>
+      <HintPath>..\libs\MongoDriver\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
