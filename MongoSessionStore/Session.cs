@@ -28,17 +28,19 @@ namespace MongoSessionStore
 
         public Session(string id, string applicationName, int timeout, BsonBinaryData sessionItems, int sessionItemsCount, SessionStateActions actionFlags)
         {
+            DateTime now = DateTime.Now;
+
             SessionID = id;
             ApplicationName = applicationName;
-            LockDate = DateTime.Now;
+            LockDate = now;
             LockID = 0;
             Timeout = timeout;
             Locked = false;
             SessionItems = sessionItems;
             SessionItemsCount = sessionItemsCount;
             Flags = (int)actionFlags;
-            Created = DateTime.Now;
-            Expires = DateTime.Now.AddMinutes((Double)this.Timeout);         
+            Created = now;
+            Expires = now.AddMinutes((Double)this.Timeout);         
         }
 
         public Session(BsonDocument document)

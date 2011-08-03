@@ -205,7 +205,7 @@ namespace MongoSessionStore
                     }
 
                     if (actionFlags == SessionStateActions.InitializeItem)
-                        item = CreateNewStoreData(context, sessionStateSection.Timeout.Minutes);
+                        item = CreateNewStoreData(context, Convert.ToInt32(sessionStateSection.Timeout.TotalMinutes));
                     else
                         item = Deserialize(context, session.SessionItems.Bytes, session.Timeout);
                 }
